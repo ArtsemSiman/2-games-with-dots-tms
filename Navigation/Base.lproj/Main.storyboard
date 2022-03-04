@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O5t-aw-OpY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="GWY-G2-RB7">
+            <objects>
+                <navigationController id="O5t-aw-OpY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hpr-eL-FQx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GeX-Qn-HMr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bf0-1K-8ML" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-35" y="3"/>
+        </scene>
+        <!--Games Menu-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d62-8m-6nj">
+                                <rect key="frame" x="171" y="432.5" width="72" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Game 1"/>
+                                <connections>
+                                    <segue destination="gXe-Uu-Rab" kind="push" id="Agn-N3-F3s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jc-GB-rl6">
+                                <rect key="frame" x="170" y="502" width="74" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Game 2"/>
+                                <connections>
+                                    <segue destination="51s-cW-5vI" kind="push" id="9pL-7j-7Og"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fn-yA-fFj">
+                                <rect key="frame" x="290" y="128" width="84" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="🤪🤪🤪"/>
+                                <connections>
+                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2oT-Q1-s3h"/>
+                                    <action selector="changeColor:" destination="Brd-5D-EUF" eventType="touchUpInside" id="emO-jR-HR3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="d62-8m-6nj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AoI-Gs-Ysl"/>
+                            <constraint firstItem="5Jc-GB-rl6" firstAttribute="top" secondItem="d62-8m-6nj" secondAttribute="bottom" constant="38.5" id="ICz-XF-dlj"/>
+                            <constraint firstItem="d62-8m-6nj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cfB-sB-cxw"/>
+                            <constraint firstItem="5Jc-GB-rl6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eYk-nK-GEh"/>
+                            <constraint firstItem="4fn-yA-fFj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="f1g-5B-5en"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4fn-yA-fFj" secondAttribute="trailing" constant="40" id="hxy-NT-6vX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Games Menu" id="cGs-jP-v1s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="Brd-5D-EUF" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="921.73913043478262" y="20.758928571428569"/>
+        </scene>
+        <!--Game 1-->
+        <scene sceneID="hd2-Er-G8V">
+            <objects>
+                <viewController id="gXe-Uu-Rab" customClass="SecondViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="USW-K6-D8e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGH-Qk-yEW">
+                                <rect key="frame" x="160" y="831" width="94" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Next game"/>
+                                <connections>
+                                    <segue destination="51s-cW-5vI" kind="show" id="oNS-Ve-mEc"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zyw-Ss-b1y">
+                                <rect key="frame" x="182" y="228" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.9431133257575115" blue="0.068771078245322137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="NhF-aB-d8I" appends="YES" id="94K-B1-cVa"/>
+                                    <outletCollection property="gestureRecognizers" destination="684-b1-4HW" appends="YES" id="GDJ-1a-fY8"/>
+                                    <outletCollection property="gestureRecognizers" destination="tlD-tC-WbS" appends="YES" id="2RX-gc-Z08"/>
+                                    <outletCollection property="gestureRecognizers" destination="Elc-QK-FtQ" appends="YES" id="arP-ZN-ZZ6"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XTe-K1-OFd"/>
+                        <color key="backgroundColor" red="0.52622652348751986" green="1" blue="0.91115218088586103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qGH-Qk-yEW" firstAttribute="centerX" secondItem="USW-K6-D8e" secondAttribute="centerX" id="aGo-zB-hmB"/>
+                            <constraint firstItem="qGH-Qk-yEW" firstAttribute="bottom" secondItem="XTe-K1-OFd" secondAttribute="bottom" id="byz-WX-rrh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Game 1" id="JGS-Ys-YKH">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="TGI-kK-c1x">
+                            <connections>
+                                <action selector="closeSecond:" destination="gXe-Uu-Rab" id="S3g-rH-f7g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="circle" destination="Zyw-Ss-b1y" id="u7P-UE-vLl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MT7-Fs-pjb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="NhF-aB-d8I">
+                    <connections>
+                        <action selector="swipes:" destination="gXe-Uu-Rab" id="xkf-iz-aZI"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="684-b1-4HW">
+                    <connections>
+                        <action selector="swipes:" destination="gXe-Uu-Rab" id="jbj-gI-fET"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="tlD-tC-WbS">
+                    <connections>
+                        <action selector="swipes:" destination="gXe-Uu-Rab" id="W5t-yw-a6U"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="Elc-QK-FtQ">
+                    <connections>
+                        <action selector="swipes:" destination="gXe-Uu-Rab" id="IHY-CK-5Y0"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1960.8695652173915" y="20.758928571428569"/>
+        </scene>
+        <!--Game 2-->
+        <scene sceneID="1Uy-kM-6Hn">
+            <objects>
+                <viewController id="51s-cW-5vI" customClass="TheirdViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Htm-dE-bv8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kRU-0V-1sq"/>
+                        <color key="backgroundColor" red="0.45202502649416332" green="0.73122439946223983" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bDM-ri-jZP" appends="YES" id="xFl-Oy-3qo"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Game 2" id="0VU-yD-Sgt">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="cbM-Ko-9x4">
+                            <connections>
+                                <action selector="closeTheird:" destination="51s-cW-5vI" id="1LD-EF-qdz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPe-xk-rH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bDM-ri-jZP">
+                    <connections>
+                        <action selector="tap:" destination="51s-cW-5vI" id="cm8-Zc-7ln"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1982.608695652174" y="724.55357142857144"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oNS-Ve-mEc"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
